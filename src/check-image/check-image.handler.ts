@@ -6,7 +6,7 @@ import { CheckImageService } from './check-image.service';
 @Injectable()
 export class CheckImageHandler {
   constructor(private readonly checkImageService: CheckImageService) {}
-  @On({ event: 'message' })
+  @On({ event: 'messageCreate' })
   checkImage(message: Message) {
     if (message.author.bot) {
       return;

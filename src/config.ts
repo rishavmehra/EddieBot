@@ -1,4 +1,4 @@
-import { MessageEmbed } from 'discord.js';
+import { HexColorString, MessageEmbed } from 'discord.js';
 
 export default {
   preventWords: ['guyz', 'guyzz', 'bruh', 'duude', 'women', 'sir', 'man'],
@@ -38,7 +38,7 @@ export default {
 
   defaultEmbed: (color = '#0099ff') => {
     return new MessageEmbed()
-      .setColor(color)
+      .setColor(color as HexColorString)
       .setFooter(
         'Our bot is Open Source, you can find it here https://github.com/EddieHubCommunity/EddieBot',
       );
